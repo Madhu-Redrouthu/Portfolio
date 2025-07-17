@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Madhu Redrouthu, a Java Full Stack Developer, DevOps Engineer, and Test Engineer based in Guntur, India.">
+    <meta name="keywords" content="Madhu Redrouthu, Full Stack Developer, DevOps Engineer, Test Engineer, Java, React.js, AWS, portfolio">
+    <meta property="og:title" content="Madhu Redrouthu's Portfolio">
+    <meta property="og:description" content="Explore the projects and skills of Madhu Redrouthu, a passionate Computer Science graduate from Guntur, India.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Madhu-Redrouthu/portfolio">
+    <title>Madhu Redrouthu's Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            background: #444;
+            padding: 1rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #007bff;
+        }
+        section {
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .about, .education, .skills, .certifications, .achievements, .projects, .hobbies, .contact {
+            background: #fff;
+            border-radius: 5px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .skills h3 {
+            color: #007bff;
+            margin-top: 1.5rem;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .project-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .project-card h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .project-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        .skills ul, .certifications ul, .achievements ul, .hobbies ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .skills li, .certifications li, .achievements li, .hobbies li {
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+        .skills li:hover, .certifications li:hover, .achievements li:hover, .hobbies li:hover {
+            background: #e0e7ff;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .contact label {
+            font-weight: bold;
+            color: #333;
+        }
+        .contact input, .contact textarea {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .contact textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .contact button {
+            background: #007bff;
+            color: #fff;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        .contact button:hover {
+            background: #0056b3;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Hamburger Menu for Mobile */
+        .nav-toggle {
+            display: none;
+            font-size: 1.5rem;
+            color: #fff;
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background: #444;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                padding: 1rem 0;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            .nav-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header role="banner">
+        <h1>Madhu Redrouthu</h1>
+        <p>Java Full Stack Developer | DevOps Engineer | Test Engineer</p>
+    </header>
+    <nav role="navigation">
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <ul id="nav-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Technical Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="about" class="about" role="region" aria-label="About Me">
+        <h2>About Me</h2>
+        <p>Hello! I'm Madhu Redrouthu, a passionate Computer Science graduate from Guntur, India, with expertise in Java full-stack development, DevOps, and testing. I enjoy building efficient, scalable web applications, automating development processes, and ensuring software quality using modern tools and technologies. I am actively expanding my skill set to include advanced testing and infrastructure tools to enhance my versatility.</p>
+    </section>
+    <section id="education" class="education" role="region" aria-label="Education">
+        <h2>Education</h2>
+        <ul>
+            <li>
+                <strong>Bachelor of Technology in Computer Science</strong><br>
+                Chalapathi Institute of Technology, Guntur, Andhra Pradesh<br>
+                2021 - 2025
+            </li>
+            <li>
+                <strong>Intermediate (12th Standard)</strong><br>
+                Sri Chaitanya Jr College, Guntur, Andhra Pradesh<br>
+                2019 - 2021
+            </li>
+            <li>
+                <strong>10th Standard</strong><br>
+                Z.P. High School, Pragnam, Andhra Pradesh<br>
+                2018 - 2019
+            </li>
+        </ul>
+    </section>
+    <section id="skills" class="skills" role="region" aria-label="Technical Skills">
+        <h2>Technical Skills</h2>
+        <h3>Front-End</h3>
+        <ul>
+            <li>HTML/CSS</li>
+            <li>JavaScript</li>
+            <li>React.js</li>
+            <li>Jest</li>
+        </ul>
+        <h3>Back-End</h3>
+        <ul>
+            <li>Java</li>
+            <li>Spring Boot</li>
+            <li>Python</li>
+            <li>JUnit</li>
+        </ul>
+        <h3>Databases</h3>
+        <ul>
+            <li>SQL</li>
+            <li>MongoDB</li>
+        </ul>
+        <h3>DevOps</h3>
+        <ul>
+            <li>Docker</li>
+            <li>Kubernetes</li>
+            <li>Jenkins</li>
+            <li>AWS</li>
+            <li>Azure</li>
+            <li>Ansible</li>
+            <li>Terraform</li>
+            <li>Prometheus</li>
+            <li>Grafana</li>
+            <li>ELK Stack</li>
+            <li>Bash</li>
+            <li>Git</li>
+        </ul>
+        <h3>Testing</h3>
+        <ul>
+            <li>Selenium</li>
+            <li>Postman</li>
+            <li>Jira</li>
+        </ul>
+    </section>
+    <section id="projects" class="projects" role="region" aria-label="Projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Personal Portfolio Website</h3>
+            <p>A responsive portfolio website built with HTML, CSS, JavaScript, and React.js, tested with Jest for 95% cross-browser compatibility.</p>
+            <a href="https://github.com/Madhu-Redrouthu/portfolio">View on GitHub</a>
+            <a href="#">View Live Demo</a>
+        </div>
+        <div class="project-card">
+            <h3>Task Management Application</h3>
+            <p>A full-stack application using Java, Spring Boot, React.js, and MongoDB, with Postman for API testing and JUnit for unit testing, improving user productivity by 20%.</p>
+            <a href="https://github.com/Madhu-Redrouthu/task-manager">View on GitHub</a>
+            <a href="#">View Live Demo</a>
+        </div>
+        <div class="project-card">
+            <h3>CI/CD Pipeline for Node.js App</h3>
+            <p>Implemented a CI/CD pipeline using Jenkins, Docker, Ansible, Terraform, Prometheus, Grafana, and AWS, with ELK Stack for logging and Selenium for automated testing, reducing deployment time by 50% and achieving 99.9% uptime.</p>
+            <a href="https://github.com/Madhu-Redrouthu/cicd-pipeline">View on GitHub</a>
+            <a href="#">View Live Demo</a>
+        </div>
+    </section>
+    <section id="achievements" class="achievements" role="region" aria-label="Achievements">
+        <h2>Achievements</h2>
+        <ul>
+            <li>Developed a Task Management Application improving productivity by 20%</li>
+            <li>Achieved 95% cross-browser compatibility in a Personal Portfolio Website using Jest</li>
+            <li>Reduced deployment time by 50% in a CI/CD pipeline project for a Node.js application</li>
+            <li>Achieved 99.9% uptime in a Node.js application through effective monitoring with Prometheus and Grafana</li>
+            <li>Reduced incident response time by 25% in a CI/CD pipeline project using ELK Stack</li>
+            <li>Member of Computer Science Club, organized tech workshops</li>
+        </ul>
+    </section>
+    <section id="certifications" class="certifications" role="region" aria-label="Certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Microsoft Certified: Azure Fundamentals</li>
+            <li>Python Institute: Certified Entry-Level Python Programming</li>
+            <li>Java and SQL Certification</li>
+            <li>AWS Certified Cloud Practitioner</li>
+            <li>In Progress: Selenium WebDriver Certification</li>
+            <li>In Progress: Terraform Associate Certification</li>
+        </ul>
+    </section>
+    <section id="hobbies" class="hobbies" role="region" aria-label="Hobbies">
+        <h2>Hobbies</h2>
+        <ul>
+            <li>Contributing to open-source projects</li>
+            <li>Reading tech blogs</li>
+            <li>Playing chess</li>
+            <li>Exploring cloud computing trends</li>
+        </ul>
+    </section>
+    <section id="contact" class="contact" role="region" aria-label="Contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out for collaboration or opportunities!</p>
+        <!-- Formspree Contact Form: Sign up at https://formspree.io, create a form, and replace [Your-Formspree-Endpoint] with your unique endpoint -->
+        <form action="https://formspree.io/[Your-Formspree-Endpoint]" method="POST" id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required aria-required="true" placeholder="Your Name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="_replyto" required aria-required="true" placeholder="Your Email">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required aria-required="true" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p>Email: rmadhu1909@gmail.com</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/madhu-redrouthu-240468364">linkedin.com/in/madhu-redrouthu-240468364</a></p>
+        <p>GitHub: <a href="https://github.com/Madhu-Redrouthu">github.com/Madhu-Redrouthu</a></p>
+        <p>Location: Guntur, Andhra Pradesh, India</p>
+    </section>
+    <footer role="contentinfo">
+        <p>© 2025 Madhu Redrouthu. All rights reserved.</p>
+    </footer>
+    <script>
+        // Hamburger Menu Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('#nav-menu');
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Basic Form Validation
+        const contactForm = document.querySelector('#contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            const name = document.querySelector('#name').value.trim();
+            const email = document.querySelector('#email').value.trim();
+            const message = document.querySelector('#message').value.trim();
+            if (!name || !email || !message) {
+                e.preventDefault();
+                alert('Please fill out all fields.');
+            }
+        });
+    </script>
+</body>
+</html>
