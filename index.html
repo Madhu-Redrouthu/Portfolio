@@ -56,18 +56,18 @@
             max-width: 1000px;
             margin: 0 auto;
         }
-        .about, .education, .skills, .certifications, .achievements, .projects, .hobbies, .contact {
+        .Professional Summary, .Education, .Technical skills, .certifications, .Work Experience, .hobbies, .contact {
             background: #fff;
             border-radius: 5px;
             padding: 2rem;
             margin-bottom: 2rem;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        .skills h3 {
+        . Technical skills h3 {
             color: #007bff;
             margin-top: 1.5rem;
         }
-        .projects {
+        .Work Experience {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.5rem;
@@ -79,31 +79,31 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             text-align: center;
         }
-        .project-card h3 {
+        .Work Experience-card h3 {
             margin-top: 0;
             color: #007bff;
         }
-        .project-card img {
+        .Work Experience-card img {
             max-width: 100%;
             height: auto;
             border-radius: 5px;
             margin-bottom: 1rem;
         }
-        .skills ul, .certifications ul, .achievements ul, .hobbies ul {
+        . Technical skills ul, .certifications ul, .hobbies ul {
             list-style: none;
             padding: 0;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
         }
-        .skills li, .certifications li, .achievements li, .hobbies li {
+        . Technical skills li, .certifications li, .hobbies li {
             background: #f9f9f9;
             padding: 1rem;
             border-radius: 5px;
             text-align: center;
             transition: background 0.3s;
         }
-        .skills li:hover, .certifications li:hover, .achievements li:hover, .hobbies li:hover {
+        . Technical skills li:hover, .certifications li:hover, .hobbies li:hover {
             background: #e0e7ff;
         }
         .contact form {
@@ -188,17 +188,17 @@
     <nav role="navigation">
         <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
         <ul id="nav-menu">
-            <li><a href="#about">Professional Summary</a></li>
+            <li><a href="#Professional Summary">Professional Summary</a></li>
             <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Technical Skills</a></li>
-            <li><a href="#Work Experience">PWork Experience</a></li>
+            <li><a href="#Technical kills">Technical Skills</a></li>
+            <li><a href="#Work Experience">Work Experience</a></li>
             <li><a href="#certifications">Certifications</a></li>
             <li><a href="#hobbies">Hobbies</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <section id="about" class="about" role="region" aria-label="About Me">
-        <h2>About Me</h2>
+    <section id="Professional Summary" class="Professional Summary" role="region" aria-label="Professional Summary">
+        <h2>Professional Summary</h2>
         <p> I'm Madhu Redrouthu, Computer Science B.Tech skilled in Full Stack Development, DevOps, and Software Testing, proficient in Java, React.js, Spring Boot, AWS, Docker, Jenkins, and Selenium. Experienced in building scalable web applications and automating CI/CD pipelines, improving performance by 25% and reducing deployment times by 30%. Adept at ensuring high-quality software through robust automation testing. Passionate about delivering efficient, user-centric solutions in dynamic tech environments.  .</p>
     </section>
     <section id="education" class="education" role="region" aria-label="Education">
@@ -210,7 +210,7 @@
                 July 2016 - January 2024
             </li>
             <li>
-                <strong>Intermediate (M.P.C)</strong><br>
+                <strong>Intermediate(M.P.C)</strong><br>
                 Sri Chaitanya Jr College, Guntur, Andhra Pradesh<br>
                 June 2014 - March 2016
             </li>
@@ -221,7 +221,7 @@
             </li>
         </ul>
     </section>
-    <section id="skills" class="skills" role="region" aria-label="Technical Skills">
+    <section id="Technical skills" class="Technical skills" role="region" aria-label="Technical Skills">
     <h2>Technical Skills</h2>
 
     <h3>Programming Languages</h3>
@@ -246,22 +246,22 @@
         <li>MongoDB</li>          
     </ul>
     </section>
-    <section id="projects" class="projects" role="region" aria-label="Projects">
-        <h2>Projects</h2>
-        <div class="project-card">
+    <section id="Work Experience" class="Work Experience" role="region" aria-label="Work Experience">
+        <h2>Work Experience</h2>
+        <div class="Work Experience-card">
             <h3>Full Stack|Online Library Management System</h3>
             <p> Developed a scalable web application serving 1,000+ users with a responsive React.js frontend and Spring Boot backend.
                 Designed secure REST APIs handling 100+ concurrent users with JWT authentication.
                 Automated 80% of testing workflows using Selenium and Java, reducing manual testing time by 25%.
                 Optimized database queries, improving response time by 15% and reducing server load.</p>
         </div>
-        <div class="project-card">
+        <div class="Work Experience-card">
             <h3>Testing|Employee Management System </h3>
             <p> Designed and executed 80+ test cases, automating 85% of workflows using Selenium and Java.
                 Conducted performance testing with JMeter, reducing API response time by 20%.
                 Optimized database queries, decreasing data-related defects by 15% and improving system efficiency. </p>
         </div>
-        <div class="project-card">
+        <div class="Work Experience-card">
             <h3> DevOps|Automation for Node.js Web Application</h3>
             <p>Automated build, test, and deployment with Jenkins and GitHub Actions, reducing deployment time by 25%.
                Containerized app with Docker and deployed on AWS EC2 via Ansible, improving scalability and uptime.
@@ -331,5 +331,6 @@
     </script>
 </body>
 </html>
+
 
 
