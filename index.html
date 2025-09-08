@@ -9,125 +9,157 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6;
-            color: #1f2937;
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+        .section-divider {
+            height: 2px;
+            background-color: #4a5568;
+            margin: 2rem 0;
+        }
+        .project-card, .skill-card, .education-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover, .skill-card:hover, .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body class="antialiased">
-    <div class="container mx-auto px-4 py-8">
-        <!-- Header Section -->
-        <header class="text-center mb-12">
-            <h1 class="text-4xl sm:text-5xl font-bold text-gray-800 mb-2">Madhu Redrouthu</h1>
-            <p class="text-lg text-gray-600 mb-4">Full Stack Developer, DevOps & Software Tester</p>
-            <div class="flex flex-wrap justify-center items-center space-x-4 text-sm text-gray-500">
-                <a href="tel:+917799661684" class="hover:text-blue-600 transition-colors duration-200">
-                    <span class="mr-1">&#9742;</span> +91 7799661684
-                </a>
-                <a href="mailto:redrouthu7@gmail.com" class="hover:text-blue-600 transition-colors duration-200">
-                    <span class="mr-1">&#9993;</span> redrouthu7@gmail.com
-                </a>
-                <a href="https://www.linkedin.com/in/madhu-redrouthu" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors duration-200">
-                    <span class="mr-1">&#9733;</span> LinkedIn
-                </a>
-                <a href="https://github.com/Madhu-Redrouthu" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors duration-200">
-                    <span class="mr-1">&#9733;</span> GitHub
-                </a>
-                <a href="https://madhu-r.netlify.app" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors duration-200">
-                    <span class="mr-1">&#9733;</span> Personal Site
-                </a>
+
+    <!-- Main Content Container -->
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+
+        <!-- Hero Section -->
+        <header class="text-center mb-12 py-16 bg-gray-800 rounded-lg shadow-xl">
+            <div class="flex flex-col items-center">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-blue-400 mb-2 tracking-wide">Madhu Redrouthu</h1>
+                <p class="text-xl md:text-2xl text-gray-300 font-light tracking-wide">Full Stack Developer | DevOps Enthusiast | Software Tester</p>
+                <div class="mt-8 flex flex-wrap justify-center items-center space-x-6 text-gray-400 text-sm">
+                    <div class="flex items-center space-x-1">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                        </svg>
+                        <a href="mailto:redrouthu7@gmail.com" class="hover:text-blue-400 transition-colors duration-200">redrouthu7@gmail.com</a>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                        </svg>
+                        <a href="https://www.linkedin.com/in/madhu-redrouthu" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors duration-200">LinkedIn</a>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.13l-1.396 7.822a.5.5 0 01-.8.2l-2.028-1.42a.5.5 0 00-.638.077l-1.745 1.745a.5.5 0 01-.707 0L5.3 12.707a.5.5 0 010-.707l1.745-1.745a.5.5 0 00.077-.638l-1.42-2.028a.5.5 0 01.2-.8l7.822-1.396a1 1 0 011.13.633z" clip-rule="evenodd"></path>
+                        </svg>
+                        <a href="https://github.com/Madhu-Redrouthu" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors duration-200">GitHub</a>
+                    </div>
+                </div>
             </div>
         </header>
 
-        <!-- Main Content Grid -->
-        <main class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Sidebar (Technical Skills, Certifications, Leadership) -->
-            <div class="md:col-span-1 space-y-8">
-                <!-- Professional Summary -->
-                <section class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300">
-                    <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">Professional Summary</h2>
-                    <p class="text-gray-700 leading-relaxed">
-                        Adaptable and detail-oriented Computer Science graduate with hands-on experience in Full Stack Development, DevOps, and Software Testing. Skilled in building scalable web applications, automating deployments, and ensuring software quality through manual and automated testing. Eager to contribute technical expertise across the full software development lifecycle in a dynamic team environment.
-                    </p>
-                </section>
+        <!-- Professional Summary Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-semibold text-white mb-6 border-b-2 border-blue-500 pb-2">Professional Summary</h2>
+            <p class="text-gray-300 leading-relaxed text-lg">
+                Adaptable and detail-oriented Computer Science graduate with hands-on experience in Full Stack Development, DevOps, and Software Testing. Skilled in building scalable web applications, automating deployments, and ensuring software quality through manual and automated testing. Eager to contribute technical expertise across the full software development lifecycle in a dynamic team environment.
+            </p>
+        </section>
 
-                <!-- Technical Skills -->
-                <section class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300">
-                    <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">Technical Skills</h2>
-                    <div class="space-y-4 text-sm">
-                        <p><strong>Programming & Frameworks:</strong> Java, JavaScript, SQL, Python, React.js, Spring Boot, Node.js, HTML, CSS</p>
-                        <p><strong>DevOps & Cloud:</strong> Jenkins, GitHub Actions, Docker, AWS (EC2), Ansible, CI/CD, Prometheus, Grafana</p>
-                        <p><strong>Testing & QA:</strong> Selenium, Java, JMeter, Manual Testing, Test Case Design, Performance Testing, Bug Tracking, SDLC and STLC</p>
-                        <p><strong>Databases:</strong> MySQL and MongoDB</p>
-                        <p><strong>Scripting:</strong> Bash</p>
-                    </div>
-                </section>
-                
-                <!-- Education -->
-                <section class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300">
-                    <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">Education</h2>
-                    <div class="space-y-4">
-                        <div>
-                            <p class="font-medium text-gray-800">Bachelor of Technology in Computer Science and Engineering</p>
-                            <p class="text-gray-600">Chalapathi Institute of Technology, Guntur, Andhra Pradesh</p>
-                            <p class="text-gray-500 text-sm">January 2024</p>
-                        </div>
-                        <div>
-                            <p class="font-medium text-gray-800">Intermediate (M.P.C)</p>
-                            <p class="text-gray-600">Sri Chaitanya Jr. College, Guntur, Andhra Pradesh</p>
-                            <p class="text-gray-500 text-sm">March 2016</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Certifications & Leadership -->
-                <section class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 duration-300">
-                    <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">Certifications & Leadership</h2>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Microsoft Azure Fundamentals, Entry-Level Python Programming, SQL and Java</li>
-                        <li>Mentored 10+ students in Python programming.</li>
-                        <li>Actively contributed to team projects, enhancing collaboration and problem-solving skills.</li>
+        <!-- Technical Skills Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-semibold text-white mb-6 border-b-2 border-blue-500 pb-2">Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Skill Card -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md skill-card">
+                    <h3 class="text-xl font-medium text-blue-400 mb-2">Programming & Frameworks</h3>
+                    <p class="text-gray-300">Java, JavaScript, SQL, Python, React.js, Spring Boot, Node.js, HTML, CSS</p>
+                </div>
+                <!-- Skill Card -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md skill-card">
+                    <h3 class="text-xl font-medium text-blue-400 mb-2">DevOps & Cloud</h3>
+                    <p class="text-gray-300">Jenkins, GitHub Actions, Docker, AWS (EC2), Ansible, CI/CD, Prometheus, Grafana</p>
+                </div>
+                <!-- Skill Card -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md skill-card">
+                    <h3 class="text-xl font-medium text-blue-400 mb-2">Testing & QA</h3>
+                    <p class="text-gray-300">Selenium, Java, JMeter, Manual Testing, Test Case Design, Performance Testing</p>
+                </div>
+                <!-- Skill Card -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md skill-card">
+                    <h3 class="text-xl font-medium text-blue-400 mb-2">Databases & Scripting</h3>
+                    <p class="text-gray-300">MySQL, MongoDB, Bash</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-semibold text-white mb-6 border-b-2 border-blue-500 pb-2">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md project-card">
+                    <h3 class="text-xl font-bold text-blue-400 mb-2">Online Library Management System</h3>
+                    <p class="text-sm font-light text-gray-500 mb-4">Full Stack Development</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300 text-sm">
+                        <li>Developed a responsive web app for 1,000+ users with React.js, Spring Boot, and MySQL.</li>
+                        <li>Automated 80% of testing workflows using Selenium and Java.</li>
+                        <li>Optimised database queries, improving data retrieval speed by 15%.</li>
                     </ul>
-                </section>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md project-card">
+                    <h3 class="text-xl font-bold text-blue-400 mb-2">CI/CD Pipeline for Web Application</h3>
+                    <p class="text-sm font-light text-gray-500 mb-4">DevOps & CI/CD</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300 text-sm">
+                        <li>Automated build, test, and deployment for a Node.js app using Jenkins and GitHub Actions.</li>
+                        <li>Containerized app with Docker and deployed on AWS EC2 using Ansible.</li>
+                        <li>Integrated Prometheus and Grafana for real-time monitoring.</li>
+                    </ul>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md project-card">
+                    <h3 class="text-xl font-bold text-blue-400 mb-2">Employee Management System</h3>
+                    <p class="text-sm font-light text-gray-500 mb-4">Software Testing</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300 text-sm">
+                        <li>Created 80+ manual test cases and automated 85% of core workflows with Selenium & Java.</li>
+                        <li>Conducted performance testing with JMeter, reducing API response times by 20%.</li>
+                        <li>Improved database query efficiency, reducing data-related defects by 15%.</li>
+                    </ul>
+                </div>
             </div>
+        </section>
 
-            <!-- Main Content (Projects) -->
-            <div class="md:col-span-2 space-y-8">
-                <!-- Projects Section -->
-                <section class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">Projects</h2>
-                    <div class="space-y-8">
-                        <!-- Project 1 -->
-                        <div class="bg-gray-50 p-6 rounded-lg shadow-inner">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Full Stack - Online Library Management System</h3>
-                            <ul class="list-disc list-inside space-y-2 text-gray-700">
-                                <li>Developed a responsive web app for 1,000+ users using React.js, Spring Boot, and MySQL, with secure REST APIs.</li>
-                                <li>Automated 80% of testing workflows using Selenium and Java, reducing manual testing time by 25%.</li>
-                                <li>Optimised database queries, improving data retrieval speed by 15%.</li>
-                            </ul>
-                        </div>
-                        <!-- Project 2 -->
-                        <div class="bg-gray-50 p-6 rounded-lg shadow-inner">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">DevOps - CI/CD Pipeline for Web Application</h3>
-                            <ul class="list-disc list-inside space-y-2 text-gray-700">
-                                <li>Automated build, test, and deployment for a Node.js app using Jenkins and GitHub Actions which cut deployment time by 25%.</li>
-                                <li>Containerized app with Docker and deployed on AWS EC2 using Ansible, ensuring scalability.</li>
-                                <li>Integrated Prometheus and Grafana for real-time monitoring, enhancing system reliability by 15%.</li>
-                            </ul>
-                        </div>
-                        <!-- Project 3 -->
-                        <div class="bg-gray-50 p-6 rounded-lg shadow-inner">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Testing - Employee Management System</h3>
-                            <ul class="list-disc list-inside space-y-2 text-gray-700">
-                                <li>Created 80+ manual test cases and automated 85% of core workflows using Selenium & Java.</li>
-                                <li>Conducted performance testing with JMeter, reducing API response times by 20%.</li>
-                                <li>Improved database query efficiency, reducing data-related defects by 15%.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
+        <!-- Education Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-semibold text-white mb-6 border-b-2 border-blue-500 pb-2">Education</h2>
+            <div class="space-y-6">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md education-card">
+                    <p class="font-bold text-lg text-blue-400">Bachelor of Technology in Computer Science and Engineering</p>
+                    <p class="text-gray-300">Chalapathi Institute of Technology, Guntur, Andhra Pradesh</p>
+                    <p class="text-gray-500 text-sm mt-1">January 2024</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md education-card">
+                    <p class="font-bold text-lg text-blue-400">Intermediate (M.P.C)</p>
+                    <p class="text-gray-300">Sri Chaitanya Jr. College, Guntur, Andhra Pradesh</p>
+                    <p class="text-gray-500 text-sm mt-1">March 2016</p>
+                </div>
             </div>
-        </main>
+        </section>
+        
+        <!-- Certifications & Leadership Section -->
+        <section>
+            <h2 class="text-3xl font-semibold text-white mb-6 border-b-2 border-blue-500 pb-2">Certifications & Leadership</h2>
+            <ul class="list-disc list-inside space-y-2 text-gray-300 text-lg">
+                <li>Microsoft Azure Fundamentals, Entry-Level Python Programming, SQL and Java</li>
+                <li>Mentored 10+ students in Python programming.</li>
+                <li>Actively contributed to team projects, enhancing collaboration and problem-solving skills.</li>
+            </ul>
+        </section>
+        
     </div>
+
 </body>
 </html>
