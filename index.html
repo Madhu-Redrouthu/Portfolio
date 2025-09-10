@@ -4,96 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Madhu Redrouthu - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #34495e;
+            --secondary-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f5f7fa;
+            --dark-bg: #2c3e50;
+            --border-color: #dfe6e9;
+        }
+
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f7f6;
-            color: #333;
+            background-color: var(--light-bg);
+            color: var(--text-color);
             line-height: 1.6;
         }
+
         .container {
-            max-width: 900px;
+            max-width: 960px;
             margin: 40px auto;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
         }
+
         .header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 20px;
             text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #e0e0e0;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
         }
+
         .header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3em;
             margin: 0;
-            font-size: 2.5em;
-            color: #2c3e50;
         }
-        .header p.tagline {
+
+        .header p {
             font-size: 1.2em;
-            color: #7f8c8d;
-            margin: 5px 0 0;
+            margin-top: 10px;
         }
+
         .contact-info {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 15px;
+            margin-top: 20px;
+            gap: 20px;
         }
+
         .contact-info a {
-            color: #3498db;
+            color: white;
             text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
         }
+
         .contact-info a:hover {
-            color: #2980b9;
+            color: var(--secondary-color);
         }
-        section {
-            margin-top: 30px;
+
+        .content-section {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: -30px;
+            position: relative;
+            z-index: 2;
         }
-        section h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2em;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
             padding-bottom: 5px;
+            margin-bottom: 20px;
         }
-        .skill-list, .project-list {
-            list-style-type: none;
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
             padding: 0;
+            list-style: none;
         }
+
         .skill-list li {
-            background-color: #ecf0f1;
-            display: inline-block;
+            background-color: var(--dark-bg);
+            color: white;
             padding: 8px 15px;
-            margin: 5px;
             border-radius: 20px;
             font-size: 0.9em;
+            transition: transform 0.2s ease;
         }
+
+        .skill-list li:hover {
+            transform: translateY(-3px);
+            background-color: var(--secondary-color);
+        }
+
         .project {
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: #fafafa;
-            border-left: 4px solid #3498db;
-            border-radius: 4px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
         }
+
         .project h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
             margin-top: 0;
-            color: #34495e;
         }
+
         .project p.tech-stack {
             font-style: italic;
-            color: #555;
+            color: #777;
             font-size: 0.9em;
         }
+        
         .footer {
             text-align: center;
             margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #e0e0e0;
+            padding: 20px;
             color: #7f8c8d;
         }
     </style>
@@ -102,66 +143,80 @@
     <div class="container">
         <header class="header">
             <h1>Madhu Redrouthu</h1>
-            <p class="tagline">Software Quality Assurance & Full Stack Developer</p>
+            <p>Software Quality Assurance & Full Stack Developer</p>
             <div class="contact-info">
-                <a href="mailto:redrouthu7@gmail.com">redrouthu7@gmail.com</a>
-                <a href="https://www.linkedin.com/in/madhu-redrouthu" target="_blank">LinkedIn</a>
-                <a href="https://github.com/Madhu-Redrouthu" target="_blank">GitHub</a>
-                <a href="https://madhu-r.netlify.app" target="_blank">Portfolio</a>
+                <a href="mailto:redrouthu7@gmail.com"><i class="fas fa-envelope"></i> redrouthu7@gmail.com</a>
+                <a href="https://www.linkedin.com/in/madhu-redrouthu" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/Madhu-Redrouthu" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://madhu-r.netlify.app" target="_blank"><i class="fas fa-link"></i> Portfolio</a>
             </div>
         </header>
 
-        <section>
-            <h2>Professional Summary</h2>
+        <section class="content-section">
+            <h2><i class="fas fa-user-circle"></i> Professional Summary</h2>
             <p>
                 An enthusiastic and dedicated entry-level professional with a solid foundation in both Software Quality
-                [cite_start]Assurance and Full Stack Development[cite: 5]. [cite_start]Skilled in building responsive, database-driven web applications and creating RESTful APIs[cite: 6].
-                [cite_start]Proficient in both manual and automation testing with tools like Selenium WebDriver, Postman, and JMeter[cite: 7].
-                [cite_start]I am eager to contribute to a collaborative team and deliver efficient, scalable, and user-friendly software solutions[cite: 8].
+                Assurance and Full Stack Development. Skilled in building responsive, database-driven web applications and creating RESTful APIs.
+                Proficient in both manual and automation testing with tools like Selenium WebDriver, Postman, and JMeter.
+                I am eager to contribute to a collaborative team and deliver efficient, scalable, and user-friendly software solutions.
             </p>
         </section>
 
-        <section>
-            <h2>Technical Skills</h2>
+        <section class="content-section">
+            <h2><i class="fas fa-tools"></i> Technical Skills</h2>
             <ul class="skill-list">
                 <li>Java</li>
                 <li>Python</li>
                 <li>JavaScript</li>
+                <li>HTML5</li>li>
+                <li>CSS3</li>
+                <li>Bootstrap</li>
                 <li>React.js</li>
                 <li>Node.js</li>
+                <li>Flask</li>
                 <li>Express.js</li>
                 <li>Spring Boot</li>
                 <li>MySQL</li>
                 <li>MongoDB</li>
+                <li>SDLC & STLC</li>
+                <li>Regression Testing</li>
+                <li>Functional Testing</li>
+                <li>Usability Testing</li>
+                <li>System Testing</li>
+                <li>API Testing</li>
                 <li>Selenium WebDriver</li>
                 <li>Postman</li>
                 <li>JMeter</li>
+                <li>TestNG</li>
+                <li>Junit</li>
                 <li>JIRA</li>
                 <li>Git</li>
                 <li>Docker</li>
+                <li>AWS</li>
+                <li>Window & Linux</li>
             </ul>
         </section>
 
-        <section>
-            <h2>Academic Projects</h2>
+        <section class="content-section">
+            <h2><i class="fas fa-folder-open"></i> Academic Projects</h2>
             <div class="project">
-                <h3>1. Online Bookstore Web Application</h3>
-                [cite_start]<p>Developed a full stack e-commerce application with features like Login/Register, Browse & Search Books, Shopping Cart, and Checkout[cite: 22].</p>
+                <h3>Online Bookstore Web Application</h3>
+                <p>Developed a full-stack e-commerce application with features like Login/Register, Browse & Search Books, Shopping Cart, and Checkout.</p>
                 <p class="tech-stack"><strong>Tech Stack:</strong> Node.js, Express.js, MySQL, MongoDB, React.js, Bootstrap</p>
-                [cite_start]<p><strong>Testing:</strong> Built RESTful APIs and conducted API testing with Postman[cite: 23, 25].</p>
+                <p><strong>Testing:</strong> Built RESTful APIs and conducted API testing with Postman.</p>
             </div>
             <div class="project">
-                <h3>2. E-Commerce Web Application Testing</h3>
-                [cite_start]<p>Performed manual and automation testing on key modules, including Login, Product Search, Cart, and Payment[cite: 29].</p>
+                <h3>E-Commerce Web Application Testing</h3>
+                <p>Performed manual and automation testing on key modules, including Login, Product Search, Cart, and Payment.</p>
                 <p class="tech-stack"><strong>Tools:</strong> Selenium WebDriver, TestNG, Postman, JMeter, TestRail, JIRA</p>
-                <p><strong>Methodology:</strong> Automated regression scenarios using Selenium WebDriver and conducted performance testing with JMeter. [cite_start]Logged defects in JIRA and validated backend data with SQL queries[cite: 30, 31].</p>
+                <p><strong>Methodology:</strong> Automated regression scenarios using Selenium WebDriver and conducted performance testing with JMeter. Logged defects in JIRA and validated backend data with SQL queries.</p>
             </div>
         </section>
         
-        <section>
-            <h2>Education</h2>
+        <section class="content-section">
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
             <p><strong>Bachelor of Technology in Computer Science and Engineering</strong></p>
-            [cite_start]<p>Chalapathi Institute of Technology, Guntur, Andhra Pradesh - January 2024 [cite: 34, 35]</p>
+            <p>Chalapathi Institute of Technology, Guntur, Andhra Pradesh - January 2024</p>
         </section>
 
         <footer class="footer">
