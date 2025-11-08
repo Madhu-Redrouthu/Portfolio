@@ -1,260 +1,227 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madhu Redrouthu - Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #34495e;
-            --secondary-color: #e74c3c;
-            --text-color: #333;
-            --light-bg: #f5f7fa;
-            --dark-bg: #2c3e50;
-            --border-color: #dfe6e9;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Madhu Redrouthu • Realistic Portfolio</title>
+  <meta name="description" content="Realistic portfolio of Madhu Redrouthu — Entry-level Python Full‑Stack Developer & Software Test Engineer with practical projects and testing artifacts." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fafafa; --surface:#ffffff; --ink:#0b1220; --muted:#667085; --border:#e6e6e6;
+      --brand:#111827; --accent:#2563eb; --ok:#16a34a; --warn:#ea580c; --radius:14px;
+      --shadow: 0 1px 2px rgba(16,24,40,.06), 0 8px 20px rgba(16,24,40,.06);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; background:var(--bg); color:var(--ink); line-height:1.65}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:min(1024px, 92%); margin-inline:auto}
 
-        body {
-            font-family: 'Open Sans', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--light-bg);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
+    header{position:sticky; top:0; z-index:40; backdrop-filter:saturate(140%) blur(6px); background:rgba(250,250,250,.8); border-bottom:1px solid var(--border)}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:12px 0}
+    .brand{display:flex; gap:10px; align-items:center}
+    .logo{width:36px; height:36px; border-radius:10px; background:#111827; color:#fff; display:grid; place-items:center; font-weight:800; letter-spacing:.5px}
+    .brand h1{margin:0; font-size:18px}
+    .nav a.btn{padding:8px 12px; border-radius:10px; border:1px solid var(--border); background:#fff}
+    .nav a.btn.primary{background:var(--ink); color:#fff; border-color:transparent}
 
-        .container {
-            max-width: 960px;
-            margin: 40px auto;
-            padding: 20px;
-        }
+    .card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); padding:18px}
+    section{padding:14px 0}
+    .section-title{display:flex; align-items:center; justify-content:space-between; margin-bottom:8px}
+    .section-title h2{margin:0; font-size:20px}
 
-        .header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            position: relative;
-            z-index: 1;
-        }
+    .grid{display:grid; gap:14px}
+    .two{grid-template-columns:2fr 1fr}
+    @media (max-width: 900px){ .two{grid-template-columns:1fr} }
 
-        .header h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3em;
-            margin: 0;
-        }
+    ul{margin:8px 0 0 18px}
+    .kv{display:grid; grid-template-columns:repeat(3,1fr); gap:10px}
+    .kv .box{border:1px dashed var(--border); border-radius:10px; padding:10px; background:#fff}
+    .kv .k{font-size:12px; color:var(--muted)}
+    .kv .v{font-weight:700}
 
-        .header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
+    .skills{display:grid; grid-template-columns:repeat(12,1fr); gap:12px}
+    .skills .col{grid-column:span 6}
+    @media (max-width: 860px){ .skills .col{grid-column:span 12} }
+    .tag{display:inline-block; padding:4px 10px; border:1px solid var(--border); border-radius:999px; background:#fff; font-size:12px; margin:4px 6px 0 0}
 
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 20px;
-            gap: 20px;
-        }
+    .proj{display:grid; gap:8px}
+    .meta{color:var(--muted); font-size:13px}
+    .actions{display:flex; gap:8px; flex-wrap:wrap; margin-top:8px}
+    .button{display:inline-flex; gap:8px; align-items:center; padding:8px 10px; border:1px solid var(--border); border-radius:10px; background:#fff}
 
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.1em;
-            transition: color 0.3s ease;
-        }
+    table{width:100%; border-collapse:collapse; font-size:14px}
+    th, td{border-top:1px solid var(--border); padding:10px; text-align:left}
+    th{background:#f7f7f7; font-weight:600}
 
-        .contact-info a:hover {
-            color: var(--secondary-color);
-        }
-
-        .content-section {
-            background-color: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin-top: -30px;
-            position: relative;
-            z-index: 2;
-        }
-
-        h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2em;
-            color: var(--primary-color);
-            border-bottom: 3px solid var(--secondary-color);
-            padding-bottom: 5px;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 0;
-            list-style: none;
-        }
-
-        .skill-list li {
-            background-color: var(--dark-bg);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            transition: transform 0.2s ease;
-        }
-
-        .skill-list li:hover {
-            transform: translateY(-3px);
-            background-color: var(--secondary-color);
-        }
-
-        .project {
-            margin-bottom: 30px;
-            border-left: 5px solid var(--primary-color);
-            padding-left: 15px;
-        }
-
-        .project h3 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--primary-color);
-            margin-top: 0;
-        }
-
-        .project p.tech-stack {
-            font-style: italic;
-            color: #777;
-            font-size: 0.9em;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            color: #7f8c8d;
-        }
-    </style>
+    footer{padding:28px 0; color:var(--muted); font-size:14px; text-align:center}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1>Madhu Redrouthu</h1>
-            <p>Software Quality Assurance & Full Stack Developer</p>
-            <div class="contact-info">
-                <a href="mailto:redrouthu7@gmail.com"><i class="fas fa-envelope"></i> redrouthu7@gmail.com</a>
-                <a href="https://www.linkedin.com/in/madhu-redrouthu" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/Madhu-Redrouthu" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://madhu-r.netlify.app" target="_blank"><i class="fas fa-link"></i> Portfolio</a>
-            </div>
-        </header>
-
-        <section class="content-section">
-            <h2><i class="fas fa-user-circle"></i> Professional Summary</h2>
-            <p>
-                Enthusiastic and detail-oriented entry-level professional skilled in both Full Stack Development and Software Testing. 
-                Experienced in building responsive, data-driven web applications and RESTful APIs. 
-                Hands-on expertise in manual and automation testing using Selenium, Postman, and JMeter. 
-                Passionate about developing scalable, secure, and user-friendly software solutions.
-            </p>
-        </section>
-
-        <section class="content-section">
-            <h2><i class="fas fa-tools"></i> Technical Skills</h2>
-            <ul class="skill-list">
-                <li>Python</li>
-                <li>Django</li>
-                <li>React.js</li>
-                <li>JavaScript</li>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>Bootstrap</li>
-                <li>Node.js</li>
-                <li>Express.js</li>
-                <li>Java</li>
-                <li>Spring Boot</li>
-                <li>SQL</li>
-                <li>MySQL</li>
-                <li>MongoDB</li>
-                <li>SDLC & STLC</li>
-                <li>Regression Testing</li>
-                <li>Functional Testing</li>
-                <li>API Testing</li>
-                <li>Selenium WebDriver</li>
-                <li>Postman</li>
-                <li>JMeter</li>
-                <li>JIRA</li>
-                <li>Agile Methodologies</li>
-                <li>Git & GitHub</li>
-                <li>Docker</li>
-                <li>AWS</li>
-                <li>Windows & Linux</li>
-            </ul>
-        </section>
-
-        <section class="content-section">
-            <h2><i class="fas fa-folder-open"></i> Academic Projects</h2>
-            
-            <div class="project">
-    <h3>Healthcare Dashboard – Full Stack Developer Project</h3>
-    <p>
-        <strong>Live Links:</strong><br>
-        🔹 <a href="https://naga-madhu-hospital-dashboard.netlify.app/" target="_blank">Frontend</a> |
-        🔹 <a href="https://healthcare-dashboard-1hym.onrender.com/" target="_blank">Backend</a>
-    </p>
-    <p>
-        Developed a full-stack healthcare management dashboard for hospital administration. 
-        The system includes modules for doctor and patient management, appointment scheduling, 
-        and admin approval workflows. Implemented authentication and role-based access for Admin and Doctors.
-    </p>
-    <p><strong>Key Features:</strong> Admin login, doctor profiles, patient details, appointment status (Approved/Pending), responsive dashboard UI.</p>
-    <p class="tech-stack"><strong>Tech Stack:</strong> Django, Django REST Framework, React.js, TailwindCSS, SQLite3</p>
-    <p><strong>Testing:</strong> API testing using Postman and automated UI regression testing using Selenium.</p>
-</div>
-
-            <div class="project">
-                <h3>E-Commerce Web Application Testing</h3>
-                <p>
-                    Performed manual and automation testing for e-commerce modules including Login, Product Search, Cart, and Payment. 
-                    Designed and executed test cases, automated regression tests, and validated backend integration.
-                </p>
-                <p class="tech-stack"><strong>Tools:</strong> Selenium WebDriver, TestNG, Postman, JMeter, TestRail, JIRA</p>
-                <p><strong>Methodology:</strong> Conducted end-to-end regression and performance testing, logged and tracked defects using JIRA, and verified database consistency with SQL queries.</p>
-            </div>
-        </section>
-
-        <section class="content-section">
-            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-            <p><strong>Bachelor of Technology in Computer Science and Engineering</strong></p>
-            <p>Chalapathi Institute of Technology, Guntur, Andhra Pradesh — January 2024</p>
-            <p><strong>Intermediate (M.P.C)</strong></p>
-            <p>Sri Chaitanya Jr College, Guntur, Andhra Pradesh — March 2016</p>
-            <p><strong>10th Standard</strong></p>
-            <p>Z.P. High School, Pragnam, Andhra Pradesh — May 2014</p>
-        </section>
-
-        <section class="content-section">
-            <h2><i class="fas fa-award"></i> Certifications & Activities</h2>
-            <ul class="activities-list">
-                <li><strong>Certifications:</strong> Python Programming, SQL, Java (Entry-Level)</li>
-                <li><strong>Leadership & Activities:</strong> Mentored 10+ students in Python programming.</li>
-                <li>Contributed to multiple collaborative projects enhancing team-based problem-solving skills.</li>
-            </ul>
-        </section>
-
-        <footer class="footer">
-            <p>&copy; 2025 Madhu Redrouthu. All rights reserved.</p>
-        </footer>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">MR</div>
+        <h1>Madhu Redrouthu</h1>
+      </div>
+      <nav class="actions">
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#testing">Testing</a>
+        <a class="btn" href="#skills">Skills</a>
+        <a class="btn primary" href="mailto:redrouthu7@gmail.com">Hire Me</a>
+      </nav>
     </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <div class="grid two">
+        <div class="card">
+          <h2 style="margin:0 0 6px">Python Full‑Stack Developer & Software Test Engineer</h2>
+          <p class="meta">Fresher • Hyderabad, Telangana • Open to Hybrid</p>
+          <p>I build small but real web apps with Django/DRF/React and validate them with practical test suites (Selenium/TestNG, Postman). I focus on simple designs, clean REST APIs, and reproducible testing.</p>
+          <div class="kv" style="margin-top:8px">
+            <div class="box"><div class="k">Focus</div><div class="v">Full‑Stack & QA</div></div>
+            <div class="box"><div class="k">Availability</div><div class="v">Immediate</div></div>
+            <div class="box"><div class="k">Relocation</div><div class="v">Open in India</div></div>
+          </div>
+        </div>
+        <div class="card">
+          <h2 class="section-title" style="margin:0">Contact</h2>
+          <div class="grid">
+            <a href="tel:+917799661684">📞 +91 7799661684</a>
+            <a href="mailto:redrouthu7@gmail.com">✉️ redrouthu7@gmail.com</a>
+            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/madhu-redrouthu">🔗 linkedin.com/in/madhu-redrouthu</a>
+            <a target="_blank" rel="noreferrer" href="https://github.com/Madhu-Redrouthu">💻 github.com/Madhu-Redrouthu</a>
+          </div>
+          <div class="actions" style="margin-top:10px">
+            <a class="button" href="Madhu_Full_Stack_Resume.pdf" download>⬇ Full‑Stack Resume</a>
+            <a class="button" href="Madhu_Testing_Resume.pdf" download>⬇ Testing Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="card">
+        <div class="section-title"><h2>Technical Skills</h2></div>
+        <div class="skills">
+          <div class="col">
+            <strong>Languages</strong>
+            <div class="meta">Python, JavaScript, Java, SQL, HTML5, CSS3</div>
+          </div>
+          <div class="col">
+            <strong>Frontend</strong>
+            <div class="meta">React, TailwindCSS, Bootstrap</div>
+          </div>
+          <div class="col">
+            <strong>Backend & APIs</strong>
+            <div class="meta">Django, DRF, Node.js</div>
+          </div>
+          <div class="col">
+            <strong>Testing</strong>
+            <div class="meta">Selenium, TestNG/JUnit, Postman, STLC/SDLC</div>
+          </div>
+        </div>
+        <div style="margin-top:10px">
+          <span class="tag">MySQL</span>
+          <span class="tag">SQLite</span>
+          <span class="tag">JWT</span>
+          <span class="tag">Git/GitHub</span>
+          <span class="tag">JSON</span>
+          <span class="tag">VS Code</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="card">
+        <div class="section-title"><h2>Case Study — Healthcare Dashboard (Full‑Stack)</h2></div>
+        <div class="proj">
+          <div class="meta">Django • DRF • React • Tailwind • SQLite3 • JWT • Deployed</div>
+          <p><strong>Problem.</strong> A small hospital needed a simple portal for doctors, patients, appointments, and admin without vendor lock‑in.</p>
+          <p><strong>What I built.</strong> REST API with DRF, JWT auth, role‑based access (admin/doctor/patient), and a responsive React UI. Basic CRUD for patient records and appointment scheduling.</p>
+          <p><strong>How I tested.</strong> Postman collections for CRUD/auth flows; Selenium smoke tests for login, navigation, and create/edit forms; SQL checks for data persistence.</p>
+          <div class="actions">
+            <a class="button" target="_blank" rel="noreferrer" href="https://naga-madhu-hospital-dashboard.netlify.app/">Live Frontend ↗</a>
+            <a class="button" target="_blank" rel="noreferrer" href="https://healthcare-dashboard-1hym.onrender.com/">Live Backend ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testing">
+      <div class="card">
+        <div class="section-title"><h2>Testing Project — Online Shopping Website</h2></div>
+        <p class="meta">Selenium WebDriver • TestNG (Java) • Postman • SQL • JIRA</p>
+        <div class="grid">
+          <div>
+            <strong>Scope covered</strong>
+            <ul>
+              <li>Authentication: register, login, logout, forgot password (UI + API)</li>
+              <li>Cart & Checkout: add/remove items, quantity, address, payment flow (mock)</li>
+              <li>Negative cases: invalid inputs, session expiry, unauthorized API access</li>
+            </ul>
+          </div>
+          <div>
+            <strong>Deliverables produced</strong>
+            <ul>
+              <li>Test scenarios & cases (manual)</li>
+              <li>Automation scripts (Selenium + TestNG) for smoke/regression</li>
+              <li>Postman collection for core APIs</li>
+              <li>Bug reports in JIRA with repro steps & screenshots</li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top:10px">
+          <table>
+            <thead><tr><th>Area</th><th>Example Check</th><th>Outcome</th></tr></thead>
+            <tbody>
+              <tr><td>Login</td><td>Valid creds redirect to dashboard within 2s.</td><td><span style="color:var(--ok)">Pass</span></td></tr>
+              <tr><td>Cart</td><td>Quantity update reflects subtotal immediately.</td><td><span style="color:var(--ok)">Pass</span></td></tr>
+              <tr><td>Checkout</td><td>Attempt without address shows clear error.</td><td><span style="color:var(--warn)">Fail (bug filed)</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="card">
+        <div class="section-title"><h2>Education & Certifications</h2></div>
+        <div class="grid">
+          <div>
+            <strong>Chalapathi Institute of Technology, Guntur, AP</strong>
+            <div class="meta">B.Tech (CSE), Jan 2024</div>
+          </div>
+          <div>
+            <strong>Certifications</strong>
+            <div class="tag">Python Programming (Great Learning)</div>
+            <div class="tag">SQL (Great Learning)</div>
+            <div class="tag">Java (Great Learning)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container card" style="text-align:center">
+      <p style="margin:0 0 8px">I’m ready to contribute across development and testing on real products.</p>
+      <div class="actions" style="justify-content:center">
+        <a class="button" href="mailto:redrouthu7@gmail.com">Contact</a>
+        <a class="button" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/madhu-redrouthu">LinkedIn</a>
+        <a class="button" target="_blank" rel="noreferrer" href="https://github.com/Madhu-Redrouthu">GitHub</a>
+        <a class="button" href="Madhu_Full_Stack_Resume.pdf" download>Resume (Dev)</a>
+        <a class="button" href="Madhu_Testing_Resume.pdf" download>Resume (Testing)</a>
+      </div>
+      <p class="meta" style="margin-top:10px; color:#94a3b8">© <span id="y"></span> Madhu Redrouthu</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
-
-
