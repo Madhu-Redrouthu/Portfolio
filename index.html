@@ -13,190 +13,218 @@
   --bg:#0f172a;
   --card:#111827;
   --accent:#38bdf8;
-  --text:#e5e7eb;
-  --muted:#9ca3af;
+  --text:#e2e8f0;
+  --muted:#94a3b8;
 }
 
 body{
   margin:0;
-  font-family:Inter;
-  background:var(--bg);
+  font-family:'Inter',sans-serif;
+  background:linear-gradient(to bottom,#020617,#0f172a);
   color:var(--text);
 }
 
-.container{
-  width:90%;
-  max-width:1100px;
-  margin:auto;
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 10%;
+  position:sticky;
+  top:0;
+  background:rgba(2,6,23,0.8);
+  backdrop-filter:blur(10px);
 }
 
-header{
-  padding:60px 0;
+nav a{
+  color:var(--text);
+  text-decoration:none;
+  margin-left:20px;
+}
+
+/* HERO */
+.hero{
   text-align:center;
+  padding:80px 20px;
 }
 
-header h1{
-  font-size:40px;
+.hero h1{
+  font-size:42px;
   margin:0;
 }
 
-header p{
+.hero span{
+  color:var(--accent);
+}
+
+.hero p{
   color:var(--muted);
+  margin-top:10px;
 }
 
 .btn{
   display:inline-block;
-  margin:10px;
-  padding:10px 16px;
-  border-radius:8px;
+  margin-top:20px;
+  padding:10px 20px;
   background:var(--accent);
   color:#000;
+  border-radius:8px;
   text-decoration:none;
   font-weight:600;
 }
 
-section{
-  margin:40px 0;
+/* SECTIONS */
+.section{
+  padding:50px 10%;
 }
 
 .card{
-  background:var(--card);
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.08);
   padding:25px;
   border-radius:12px;
-  margin-bottom:20px;
+  margin-top:20px;
 }
 
-h2{
-  border-left:4px solid var(--accent);
-  padding-left:10px;
-}
-
+/* SKILLS */
 .skills span{
   display:inline-block;
   margin:6px;
   padding:6px 12px;
-  background:#1f2937;
+  background:#1e293b;
   border-radius:20px;
   font-size:12px;
 }
 
+/* PROJECT */
 .project{
-  margin-bottom:25px;
+  margin-bottom:20px;
 }
 
 .project h3{
   margin-bottom:5px;
 }
 
-.meta{
-  color:var(--muted);
-  font-size:14px;
-}
-
-ul{
-  padding-left:20px;
-}
-
+/* FOOTER */
 footer{
   text-align:center;
-  padding:20px;
+  padding:30px;
   color:var(--muted);
+}
+
+/* HOVER EFFECT */
+.card:hover{
+  transform:translateY(-5px);
+  transition:0.3s;
 }
 </style>
 </head>
 
 <body>
 
-<header class="container">
-  <h1>Madhu Redrouthu</h1>
-  <p>Python Full Stack Developer • Django • React • REST APIs</p>
+<!-- NAV -->
+<nav>
+  <div><strong>Madhu</strong></div>
+  <div>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-  <a class="btn" href="mailto:redrouthu7@gmail.com">Hire Me</a>
-  <a class="btn" href="https://github.com/Madhu-Redrouthu" target="_blank">GitHub</a>
-</header>
-
-<div class="container">
+<!-- HERO -->
+<section class="hero">
+  <h1>Hi, I'm <span>Madhu Redrouthu</span></h1>
+  <p>Python Full Stack Developer | Django • React • REST APIs</p>
+  <a class="btn" href="#projects">View My Work</a>
+</section>
 
 <!-- ABOUT -->
-<section class="card">
+<section class="section">
   <h2>About Me</h2>
-  <p>
-    I am a Python Full Stack Developer with hands-on experience building real-world web applications 
-    using Django, React, and REST APIs. I focus on writing clean backend logic, designing responsive UI, 
-    and creating scalable applications.
-  </p>
-</section>
-
-<!-- WHY HIRE ME -->
-<section class="card">
-  <h2>Why Hire Me</h2>
-  <ul>
-    <li>✔ Built real full-stack applications (not just tutorials)</li>
-    <li>✔ Strong understanding of REST APIs & authentication (JWT)</li>
-    <li>✔ Experience with frontend + backend integration</li>
-    <li>✔ Basic testing knowledge (Postman, Selenium)</li>
-  </ul>
-</section>
-
-<!-- SKILLS -->
-<section class="card">
-  <h2>Technical Skills</h2>
-
-  <div class="skills">
-    <span>Python</span>
-    <span>Django</span>
-    <span>React</span>
-    <span>JavaScript</span>
-    <span>REST API</span>
-    <span>JWT</span>
-    <span>MySQL</span>
-    <span>SQLite</span>
-    <span>Git</span>
-    <span>Postman</span>
+  <div class="card">
+    <p>
+      I'm a Python Full Stack Developer fresher who builds real-world applications using Django, React, and REST APIs.
+      I focus on creating scalable backend systems and clean UI experiences.
+    </p>
   </div>
 </section>
 
-<!-- PROJECT 1 -->
-<section class="card project">
-  <h2>Healthcare Dashboard</h2>
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <h2>Technical Skills</h2>
+  <div class="card skills">
 
-  <p class="meta">Django • DRF • React • Tailwind • SQLite</p>
+    <strong>Languages</strong><br>
+    <span>Python</span><span>JavaScript</span><span>SQL</span>
 
-  <p><strong>Problem:</strong> Hospital needed simple system for managing doctors & patients.</p>
+    <br><br>
+    <strong>Frontend</strong><br>
+    <span>React</span><span>HTML</span><span>CSS</span><span>Tailwind</span>
 
-  <p><strong>Solution:</strong> Built full-stack app with authentication and role-based access.</p>
+    <br><br>
+    <strong>Backend</strong><br>
+    <span>Django</span><span>DRF</span><span>Node.js</span>
 
-  <ul>
-    <li>Developed REST APIs using Django REST Framework</li>
-    <li>Implemented JWT authentication</li>
-    <li>Created responsive UI using React</li>
-  </ul>
+    <br><br>
+    <strong>Tools</strong><br>
+    <span>Git</span><span>Postman</span><span>Selenium</span>
 
-  <a class="btn" href="https://naga-madhu-hospital-dashboard.netlify.app/" target="_blank">Live Frontend</a>
-  <a class="btn" href="https://healthcare-dashboard-1hym.onrender.com/" target="_blank">Live Backend</a>
+  </div>
 </section>
 
-<!-- PROJECT 2 -->
-<section class="card project">
-  <h2>Task Management System</h2>
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <h2>Projects</h2>
 
-  <p class="meta">Django • React • SQLite</p>
+  <div class="card project">
+    <h3>🏥 Healthcare Dashboard</h3>
+    <p><strong>Tech:</strong> Django, DRF, React, Tailwind</p>
 
-  <ul>
-    <li>Built CRUD-based task management app</li>
-    <li>Designed REST APIs</li>
-    <li>Implemented authentication system</li>
-  </ul>
+    <p><strong>Problem:</strong> Hospital needed simple management system</p>
+    <p><strong>Solution:</strong> Built full-stack app with authentication & role-based access</p>
+    <p><strong>Impact:</strong> Efficient patient & appointment management</p>
+
+    <a class="btn" href="https://naga-madhu-hospital-dashboard.netlify.app/" target="_blank">Live Frontend</a>
+    <a class="btn" href="https://healthcare-dashboard-1hym.onrender.com/" target="_blank">Backend API</a>
+  </div>
+
+  <div class="card project">
+    <h3>📋 Task Management System</h3>
+    <p><strong>Tech:</strong> Django, React</p>
+
+    <p><strong>Problem:</strong> Manage tasks efficiently</p>
+    <p><strong>Solution:</strong> CRUD-based system with authentication</p>
+    <p><strong>Impact:</strong> Improved task tracking</p>
+
+  </div>
+
 </section>
 
-<!-- EDUCATION -->
-<section class="card">
-  <h2>Education</h2>
-
-  <p><strong>B.Tech CSE</strong> — Chalapathi Institute of Technology (2024)</p>
+<!-- WHY HIRE ME -->
+<section class="section">
+  <h2>Why Hire Me?</h2>
+  <div class="card">
+    <ul>
+      <li>Built real full-stack projects (not just tutorials)</li>
+      <li>Strong backend + frontend combination</li>
+      <li>Understands APIs, authentication, and databases</li>
+      <li>Quick learner and ready to contribute immediately</li>
+    </ul>
+  </div>
 </section>
 
-</div>
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Email: redrouthu7@gmail.com</p>
+    <p>Phone: +91 7799661684</p>
+    <p>
+      <a href="https://github.com/Madhu-Redrouthu" target="_blank">GitHub</a> |
+      <a href="https://linkedin.com/in/madhu-redrouthu" target="_blank">LinkedIn</a>
+    </p>
+  </div>
+</section>
 
 <footer>
   © 2026 Madhu Redrouthu
