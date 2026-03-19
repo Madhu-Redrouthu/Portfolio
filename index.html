@@ -1,227 +1,206 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Madhu Redrouthu • Realistic Portfolio</title>
-  <meta name="description" content="Realistic portfolio of Madhu Redrouthu — Entry-level Python Full‑Stack Developer & Software Test Engineer with practical projects and testing artifacts." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#fafafa; --surface:#ffffff; --ink:#0b1220; --muted:#667085; --border:#e6e6e6;
-      --brand:#111827; --accent:#2563eb; --ok:#16a34a; --warn:#ea580c; --radius:14px;
-      --shadow: 0 1px 2px rgba(16,24,40,.06), 0 8px 20px rgba(16,24,40,.06);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; background:var(--bg); color:var(--ink); line-height:1.65}
-    a{color:var(--accent); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{width:min(1024px, 92%); margin-inline:auto}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    header{position:sticky; top:0; z-index:40; backdrop-filter:saturate(140%) blur(6px); background:rgba(250,250,250,.8); border-bottom:1px solid var(--border)}
-    .nav{display:flex; align-items:center; justify-content:space-between; padding:12px 0}
-    .brand{display:flex; gap:10px; align-items:center}
-    .logo{width:36px; height:36px; border-radius:10px; background:#111827; color:#fff; display:grid; place-items:center; font-weight:800; letter-spacing:.5px}
-    .brand h1{margin:0; font-size:18px}
-    .nav a.btn{padding:8px 12px; border-radius:10px; border:1px solid var(--border); background:#fff}
-    .nav a.btn.primary{background:var(--ink); color:#fff; border-color:transparent}
+<title>Madhu Redrouthu | Python Full Stack Developer</title>
 
-    .card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); padding:18px}
-    section{padding:14px 0}
-    .section-title{display:flex; align-items:center; justify-content:space-between; margin-bottom:8px}
-    .section-title h2{margin:0; font-size:20px}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-    .grid{display:grid; gap:14px}
-    .two{grid-template-columns:2fr 1fr}
-    @media (max-width: 900px){ .two{grid-template-columns:1fr} }
+<style>
+:root{
+  --bg:#0f172a;
+  --card:#111827;
+  --accent:#38bdf8;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+}
 
-    ul{margin:8px 0 0 18px}
-    .kv{display:grid; grid-template-columns:repeat(3,1fr); gap:10px}
-    .kv .box{border:1px dashed var(--border); border-radius:10px; padding:10px; background:#fff}
-    .kv .k{font-size:12px; color:var(--muted)}
-    .kv .v{font-weight:700}
+body{
+  margin:0;
+  font-family:Inter;
+  background:var(--bg);
+  color:var(--text);
+}
 
-    .skills{display:grid; grid-template-columns:repeat(12,1fr); gap:12px}
-    .skills .col{grid-column:span 6}
-    @media (max-width: 860px){ .skills .col{grid-column:span 12} }
-    .tag{display:inline-block; padding:4px 10px; border:1px solid var(--border); border-radius:999px; background:#fff; font-size:12px; margin:4px 6px 0 0}
+.container{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+}
 
-    .proj{display:grid; gap:8px}
-    .meta{color:var(--muted); font-size:13px}
-    .actions{display:flex; gap:8px; flex-wrap:wrap; margin-top:8px}
-    .button{display:inline-flex; gap:8px; align-items:center; padding:8px 10px; border:1px solid var(--border); border-radius:10px; background:#fff}
+header{
+  padding:60px 0;
+  text-align:center;
+}
 
-    table{width:100%; border-collapse:collapse; font-size:14px}
-    th, td{border-top:1px solid var(--border); padding:10px; text-align:left}
-    th{background:#f7f7f7; font-weight:600}
+header h1{
+  font-size:40px;
+  margin:0;
+}
 
-    footer{padding:28px 0; color:var(--muted); font-size:14px; text-align:center}
-  </style>
+header p{
+  color:var(--muted);
+}
+
+.btn{
+  display:inline-block;
+  margin:10px;
+  padding:10px 16px;
+  border-radius:8px;
+  background:var(--accent);
+  color:#000;
+  text-decoration:none;
+  font-weight:600;
+}
+
+section{
+  margin:40px 0;
+}
+
+.card{
+  background:var(--card);
+  padding:25px;
+  border-radius:12px;
+  margin-bottom:20px;
+}
+
+h2{
+  border-left:4px solid var(--accent);
+  padding-left:10px;
+}
+
+.skills span{
+  display:inline-block;
+  margin:6px;
+  padding:6px 12px;
+  background:#1f2937;
+  border-radius:20px;
+  font-size:12px;
+}
+
+.project{
+  margin-bottom:25px;
+}
+
+.project h3{
+  margin-bottom:5px;
+}
+
+.meta{
+  color:var(--muted);
+  font-size:14px;
+}
+
+ul{
+  padding-left:20px;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  color:var(--muted);
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <div class="logo">MR</div>
-        <h1>Madhu Redrouthu</h1>
-      </div>
-      <nav class="actions">
-        <a class="btn" href="#projects">Projects</a>
-        <a class="btn" href="#testing">Testing</a>
-        <a class="btn" href="#skills">Skills</a>
-        <a class="btn primary" href="mailto:redrouthu7@gmail.com">Hire Me</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container">
-    <section>
-      <div class="grid two">
-        <div class="card">
-          <h2 style="margin:0 0 6px">Python Full‑Stack Developer & Software Test Engineer</h2>
-          <p class="meta">Fresher • Hyderabad, Telangana • Open to Hybrid</p>
-          <p>I build small but real web apps with Django/DRF/React and validate them with practical test suites (Selenium/TestNG, Postman). I focus on simple designs, clean REST APIs, and reproducible testing.</p>
-          <div class="kv" style="margin-top:8px">
-            <div class="box"><div class="k">Focus</div><div class="v">Full‑Stack & QA</div></div>
-            <div class="box"><div class="k">Availability</div><div class="v">Immediate</div></div>
-            <div class="box"><div class="k">Relocation</div><div class="v">Open in India</div></div>
-          </div>
-        </div>
-        <div class="card">
-          <h2 class="section-title" style="margin:0">Contact</h2>
-          <div class="grid">
-            <a href="tel:+917799661684">📞 +91 7799661684</a>
-            <a href="mailto:redrouthu7@gmail.com">✉️ redrouthu7@gmail.com</a>
-            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/madhu-redrouthu">🔗 linkedin.com/in/madhu-redrouthu</a>
-            <a target="_blank" rel="noreferrer" href="https://github.com/Madhu-Redrouthu">💻 github.com/Madhu-Redrouthu</a>
-          </div>
-          <div class="actions" style="margin-top:10px">
-            <a class="button" href="Madhu_Full_Stack_Resume.pdf" download>⬇ Full‑Stack Resume</a>
-            <a class="button" href="Madhu_Testing_Resume.pdf" download>⬇ Testing Resume</a>
-          </div>
-        </div>
-      </div>
-    </section>
+<header class="container">
+  <h1>Madhu Redrouthu</h1>
+  <p>Python Full Stack Developer • Django • React • REST APIs</p>
 
-    <section id="skills">
-      <div class="card">
-        <div class="section-title"><h2>Technical Skills</h2></div>
-        <div class="skills">
-          <div class="col">
-            <strong>Languages</strong>
-            <div class="meta">Python, JavaScript, Java, SQL, HTML5, CSS3</div>
-          </div>
-          <div class="col">
-            <strong>Frontend</strong>
-            <div class="meta">React, TailwindCSS, Bootstrap</div>
-          </div>
-          <div class="col">
-            <strong>Backend & APIs</strong>
-            <div class="meta">Django, DRF, Node.js</div>
-          </div>
-          <div class="col">
-            <strong>Testing</strong>
-            <div class="meta">Selenium, TestNG/JUnit, Postman, STLC/SDLC</div>
-          </div>
-        </div>
-        <div style="margin-top:10px">
-          <span class="tag">MySQL</span>
-          <span class="tag">SQLite</span>
-          <span class="tag">JWT</span>
-          <span class="tag">Git/GitHub</span>
-          <span class="tag">JSON</span>
-          <span class="tag">VS Code</span>
-        </div>
-      </div>
-    </section>
+  <a class="btn" href="mailto:redrouthu7@gmail.com">Hire Me</a>
+  <a class="btn" href="https://github.com/Madhu-Redrouthu" target="_blank">GitHub</a>
+</header>
 
-    <section id="projects">
-      <div class="card">
-        <div class="section-title"><h2>Case Study — Healthcare Dashboard (Full‑Stack)</h2></div>
-        <div class="proj">
-          <div class="meta">Django • DRF • React • Tailwind • SQLite3 • JWT • Deployed</div>
-          <p><strong>Problem.</strong> A small hospital needed a simple portal for doctors, patients, appointments, and admin without vendor lock‑in.</p>
-          <p><strong>What I built.</strong> REST API with DRF, JWT auth, role‑based access (admin/doctor/patient), and a responsive React UI. Basic CRUD for patient records and appointment scheduling.</p>
-          <p><strong>How I tested.</strong> Postman collections for CRUD/auth flows; Selenium smoke tests for login, navigation, and create/edit forms; SQL checks for data persistence.</p>
-          <div class="actions">
-            <a class="button" target="_blank" rel="noreferrer" href="https://naga-madhu-hospital-dashboard.netlify.app/">Live Frontend ↗</a>
-            <a class="button" target="_blank" rel="noreferrer" href="https://healthcare-dashboard-1hym.onrender.com/">Live Backend ↗</a>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="container">
 
-    <section id="testing">
-      <div class="card">
-        <div class="section-title"><h2>Testing Project — Online Shopping Website</h2></div>
-        <p class="meta">Selenium WebDriver • TestNG (Java) • Postman • SQL • JIRA</p>
-        <div class="grid">
-          <div>
-            <strong>Scope covered</strong>
-            <ul>
-              <li>Authentication: register, login, logout, forgot password (UI + API)</li>
-              <li>Cart & Checkout: add/remove items, quantity, address, payment flow (mock)</li>
-              <li>Negative cases: invalid inputs, session expiry, unauthorized API access</li>
-            </ul>
-          </div>
-          <div>
-            <strong>Deliverables produced</strong>
-            <ul>
-              <li>Test scenarios & cases (manual)</li>
-              <li>Automation scripts (Selenium + TestNG) for smoke/regression</li>
-              <li>Postman collection for core APIs</li>
-              <li>Bug reports in JIRA with repro steps & screenshots</li>
-            </ul>
-          </div>
-        </div>
-        <div style="margin-top:10px">
-          <table>
-            <thead><tr><th>Area</th><th>Example Check</th><th>Outcome</th></tr></thead>
-            <tbody>
-              <tr><td>Login</td><td>Valid creds redirect to dashboard within 2s.</td><td><span style="color:var(--ok)">Pass</span></td></tr>
-              <tr><td>Cart</td><td>Quantity update reflects subtotal immediately.</td><td><span style="color:var(--ok)">Pass</span></td></tr>
-              <tr><td>Checkout</td><td>Attempt without address shows clear error.</td><td><span style="color:var(--warn)">Fail (bug filed)</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+<!-- ABOUT -->
+<section class="card">
+  <h2>About Me</h2>
+  <p>
+    I am a Python Full Stack Developer with hands-on experience building real-world web applications 
+    using Django, React, and REST APIs. I focus on writing clean backend logic, designing responsive UI, 
+    and creating scalable applications.
+  </p>
+</section>
 
-    <section id="education">
-      <div class="card">
-        <div class="section-title"><h2>Education & Certifications</h2></div>
-        <div class="grid">
-          <div>
-            <strong>Chalapathi Institute of Technology, Guntur, AP</strong>
-            <div class="meta">B.Tech (CSE), Jan 2024</div>
-          </div>
-          <div>
-            <strong>Certifications</strong>
-            <div class="tag">Python Programming (Great Learning)</div>
-            <div class="tag">SQL (Great Learning)</div>
-            <div class="tag">Java (Great Learning)</div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+<!-- WHY HIRE ME -->
+<section class="card">
+  <h2>Why Hire Me</h2>
+  <ul>
+    <li>✔ Built real full-stack applications (not just tutorials)</li>
+    <li>✔ Strong understanding of REST APIs & authentication (JWT)</li>
+    <li>✔ Experience with frontend + backend integration</li>
+    <li>✔ Basic testing knowledge (Postman, Selenium)</li>
+  </ul>
+</section>
 
-  <footer>
-    <div class="container card" style="text-align:center">
-      <p style="margin:0 0 8px">I’m ready to contribute across development and testing on real products.</p>
-      <div class="actions" style="justify-content:center">
-        <a class="button" href="mailto:redrouthu7@gmail.com">Contact</a>
-        <a class="button" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/madhu-redrouthu">LinkedIn</a>
-        <a class="button" target="_blank" rel="noreferrer" href="https://github.com/Madhu-Redrouthu">GitHub</a>
-        <a class="button" href="Madhu_Full_Stack_Resume.pdf" download>Resume (Dev)</a>
-        <a class="button" href="Madhu_Testing_Resume.pdf" download>Resume (Testing)</a>
-      </div>
-      <p class="meta" style="margin-top:10px; color:#94a3b8">© <span id="y"></span> Madhu Redrouthu</p>
-    </div>
-  </footer>
+<!-- SKILLS -->
+<section class="card">
+  <h2>Technical Skills</h2>
 
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <div class="skills">
+    <span>Python</span>
+    <span>Django</span>
+    <span>React</span>
+    <span>JavaScript</span>
+    <span>REST API</span>
+    <span>JWT</span>
+    <span>MySQL</span>
+    <span>SQLite</span>
+    <span>Git</span>
+    <span>Postman</span>
+  </div>
+</section>
+
+<!-- PROJECT 1 -->
+<section class="card project">
+  <h2>Healthcare Dashboard</h2>
+
+  <p class="meta">Django • DRF • React • Tailwind • SQLite</p>
+
+  <p><strong>Problem:</strong> Hospital needed simple system for managing doctors & patients.</p>
+
+  <p><strong>Solution:</strong> Built full-stack app with authentication and role-based access.</p>
+
+  <ul>
+    <li>Developed REST APIs using Django REST Framework</li>
+    <li>Implemented JWT authentication</li>
+    <li>Created responsive UI using React</li>
+  </ul>
+
+  <a class="btn" href="https://naga-madhu-hospital-dashboard.netlify.app/" target="_blank">Live Frontend</a>
+  <a class="btn" href="https://healthcare-dashboard-1hym.onrender.com/" target="_blank">Live Backend</a>
+</section>
+
+<!-- PROJECT 2 -->
+<section class="card project">
+  <h2>Task Management System</h2>
+
+  <p class="meta">Django • React • SQLite</p>
+
+  <ul>
+    <li>Built CRUD-based task management app</li>
+    <li>Designed REST APIs</li>
+    <li>Implemented authentication system</li>
+  </ul>
+</section>
+
+<!-- EDUCATION -->
+<section class="card">
+  <h2>Education</h2>
+
+  <p><strong>B.Tech CSE</strong> — Chalapathi Institute of Technology (2024)</p>
+</section>
+
+</div>
+
+<footer>
+  © 2026 Madhu Redrouthu
+</footer>
+
 </body>
 </html>
