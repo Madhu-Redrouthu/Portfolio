@@ -1,145 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Madhu Redrouthu Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madhu Redrouthu | Portfolio</title>
 
-<script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-<style>
-body { font-family: 'Poppins', sans-serif; }
-html { scroll-behavior: smooth; }
-</style>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
 
-<body class="bg-gray-950 text-white transition duration-300" id="body">
-
-<!-- NAVBAR -->
-<nav class="fixed w-full bg-black/50 backdrop-blur-lg z-50 p-4 flex justify-between items-center">
-  <h1 class="font-bold text-xl">Madhu</h1>
-  <div class="flex gap-6">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-    <button onclick="toggleMode()">🌙</button>
-  </div>
-</nav>
+<body class="bg-gray-950 text-white">
 
 <!-- HERO -->
 <section class="h-screen flex flex-col justify-center items-center text-center px-4">
   <h1 class="text-4xl md:text-6xl font-bold">
-    Hi, I'm Madhu 👋
+    Hi, I'm Madhu Redrouthu 👋
   </h1>
 
-  <h2 class="mt-4 text-xl text-blue-400" id="typing"></h2>
+  <h2 class="mt-4 text-xl text-blue-400">
+    Python Full Stack Developer | Azure Enthusiast
+  </h2>
 
-  <p class="mt-4 text-gray-400 max-w-xl">
-    I build scalable web applications using Django, React, and modern cloud technologies.
+  <p class="mt-4 max-w-xl text-gray-400">
+    I build scalable, secure, and high-performance web applications using Django, React, and Azure cloud technologies.
   </p>
 
-  <a href="#projects" class="mt-6 bg-blue-600 px-6 py-2 rounded-xl hover:bg-blue-700">
-    View Work
-  </a>
+  <div class="mt-6 flex gap-4">
+    <a href="#projects" class="bg-blue-600 px-6 py-2 rounded-xl hover:bg-blue-700">
+      View Projects
+    </a>
+
+    <a href="YOUR_DRIVE_LINK_HERE" target="_blank"
+       class="border border-gray-600 px-6 py-2 rounded-xl hover:bg-gray-800">
+      Download Resume
+    </a>
+  </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="py-20 px-6 md:px-20" data-aos="fade-up">
+<section id="about" class="py-16 px-6 md:px-20">
   <h2 class="text-3xl font-semibold mb-6">About Me</h2>
+
   <p class="text-gray-400 max-w-3xl leading-relaxed">
-    Python Full Stack Developer with hands-on experience in Django, React, and REST APIs.
-    Passionate about building scalable applications, solving real-world problems, and learning cloud technologies like Azure.
+    I am a passionate Python Full Stack Developer with hands-on experience in building scalable web applications using Django, React, and REST APIs. 
+
+    I have developed real-world projects such as a Healthcare Dashboard and Task Management System, focusing on performance, security, and user experience.
+
+    I also have exposure to cloud technologies like Microsoft Azure and am eager to build and deploy applications in cloud environments.
+
+    I am actively looking for opportunities to contribute to innovative teams and grow as a developer.
   </p>
 </section>
 
 <!-- SKILLS -->
-<section class="py-20 px-6 md:px-20 bg-gray-900" data-aos="fade-up">
+<section class="py-16 px-6 md:px-20 bg-gray-900">
   <h2 class="text-3xl font-semibold mb-10">Skills</h2>
 
-  <div class="grid md:grid-cols-4 gap-6">
-    <div class="p-4 bg-gray-800 rounded-xl hover:scale-105 transition">Python</div>
-    <div class="p-4 bg-gray-800 rounded-xl hover:scale-105 transition">React</div>
-    <div class="p-4 bg-gray-800 rounded-xl hover:scale-105 transition">Django</div>
-    <div class="p-4 bg-gray-800 rounded-xl hover:scale-105 transition">Tailwind</div>
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <div class="bg-gray-800 p-4 rounded-xl">
+      <h3 class="font-bold mb-2">Frontend</h3>
+      React.js, HTML5, CSS3, TailwindCSS
+    </div>
+
+    <div class="bg-gray-800 p-4 rounded-xl">
+      <h3 class="font-bold mb-2">Backend</h3>
+      Python, Django, Django REST Framework
+    </div>
+
+    <div class="bg-gray-800 p-4 rounded-xl">
+      <h3 class="font-bold mb-2">Database</h3>
+      MySQL, SQLite
+    </div>
+
+    <div class="bg-gray-800 p-4 rounded-xl">
+      <h3 class="font-bold mb-2">Tools</h3>
+      Git, GitHub, Postman, Selenium
+    </div>
+
+    <div class="bg-gray-800 p-4 rounded-xl">
+      <h3 class="font-bold mb-2">Cloud</h3>
+      Microsoft Azure (App Service, Storage, Basics)
+    </div>
+
+    <div class="bg-gray-800 p-4 rounded-xl">
+      <h3 class="font-bold mb-2">Concepts</h3>
+      REST APIs, JWT Authentication, Full Stack Development
+    </div>
+
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="py-20 px-6 md:px-20">
+<section id="projects" class="py-16 px-6 md:px-20">
   <h2 class="text-3xl font-semibold mb-10">Projects</h2>
 
   <div class="grid md:grid-cols-2 gap-8">
 
-    <div class="bg-gray-900 p-6 rounded-2xl hover:scale-105 transition" data-aos="zoom-in">
+    <!-- Healthcare -->
+    <div class="bg-gray-900 p-6 rounded-2xl hover:scale-105 transition">
       <h3 class="text-xl font-bold">Healthcare Dashboard</h3>
-      <p class="text-gray-400 mt-2">Full-stack hospital system with JWT authentication.</p>
+      <p class="text-gray-400 mt-2">
+        Full-stack hospital management system with JWT authentication and REST APIs.
+      </p>
+      <p class="text-sm mt-2 text-gray-500">
+        Tech: Django, React, Tailwind, SQLite
+      </p>
+
       <div class="mt-4 flex gap-4">
-        <a href="https://naga-madhu-hospital-dashboard.netlify.app/" class="text-blue-400">Live</a>
+        <a href="https://naga-madhu-hospital-dashboard.netlify.app/" target="_blank" class="text-blue-400">Live</a>
       </div>
     </div>
 
-    <div class="bg-gray-900 p-6 rounded-2xl hover:scale-105 transition" data-aos="zoom-in">
-      <h3 class="text-xl font-bold">Task Manager</h3>
-      <p class="text-gray-400 mt-2">CRUD-based productivity app.</p>
-      <div class="mt-4 flex gap-4">
-        <a href="#" class="text-blue-400">Live</a>
-      </div>
+    <!-- Task Manager -->
+    <div class="bg-gray-900 p-6 rounded-2xl hover:scale-105 transition">
+      <h3 class="text-xl font-bold">Task Management System</h3>
+      <p class="text-gray-400 mt-2">
+        CRUD-based application with authentication and REST API integration.
+      </p>
+      <p class="text-sm mt-2 text-gray-500">
+        Tech: Django, React
+      </p>
+    </div>
+
+    <!-- Azure Project -->
+    <div class="bg-gray-900 p-6 rounded-2xl hover:scale-105 transition">
+      <h3 class="text-xl font-bold">Azure Deployed Web App</h3>
+      <p class="text-gray-400 mt-2">
+        Deployed a full-stack web application on Microsoft Azure using App Service and cloud storage.
+      </p>
+      <p class="text-sm mt-2 text-gray-500">
+        Tech: Azure App Service, Storage, Django
+      </p>
+    </div>
+
+    <!-- API Project -->
+    <div class="bg-gray-900 p-6 rounded-2xl hover:scale-105 transition">
+      <h3 class="text-xl font-bold">REST API Project</h3>
+      <p class="text-gray-400 mt-2">
+        Developed secure REST APIs with JWT authentication and tested using Postman.
+      </p>
+      <p class="text-sm mt-2 text-gray-500">
+        Tech: Django REST Framework
+      </p>
     </div>
 
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-20 px-6 md:px-20 bg-gray-900" data-aos="fade-up">
-  <h2 class="text-3xl font-semibold mb-6">Contact Me</h2>
+<section class="py-16 px-6 md:px-20 bg-gray-900">
+  <h2 class="text-3xl font-semibold mb-6">Contact</h2>
 
-  <form class="max-w-xl space-y-4">
-    <input type="text" placeholder="Your Name" class="w-full p-3 rounded bg-gray-800">
-    <input type="email" placeholder="Your Email" class="w-full p-3 rounded bg-gray-800">
-    <textarea placeholder="Message" class="w-full p-3 rounded bg-gray-800"></textarea>
-    <button class="bg-blue-600 px-6 py-2 rounded-xl">Send Message</button>
-  </form>
+  <div class="space-y-3 text-gray-400">
+    <p>📧 redrouthu7@gmail.com</p>
+    <p>📱 +91 7799661684</p>
+    <p>🔗 linkedin.com/in/madhu-redrouthu</p>
+    <p>💻 github.com/Madhu-Redrouthu</p>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="text-center py-6 text-gray-600">
-  © 2026 Madhu Redrouthu
+  © 2026 Madhu Redrouthu. All rights reserved.
 </footer>
-
-<!-- JS -->
-<script>
-AOS.init();
-
-// Typing Effect
-const text = ["Python Developer", "Full Stack Developer", "Azure Enthusiast"];
-let i = 0, j = 0, current = "", isDeleting = false;
-
-function type() {
-  current = text[i];
-  document.getElementById("typing").textContent = current.substring(0, j);
-
-  if (!isDeleting && j < current.length) j++;
-  else if (isDeleting && j > 0) j--;
-  else {
-    isDeleting = !isDeleting;
-    if (!isDeleting) i = (i + 1) % text.length;
-  }
-
-  setTimeout(type, isDeleting ? 50 : 100);
-}
-type();
-
-// Dark Mode Toggle
-function toggleMode() {
-  document.body.classList.toggle("bg-white");
-  document.body.classList.toggle("text-black");
-}
-</script>
 
 </body>
 </html>
